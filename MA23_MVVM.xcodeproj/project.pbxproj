@@ -14,6 +14,10 @@
 		6D86DE822BCD373E00E6311C /* MA23_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D86DE812BCD373E00E6311C /* MA23_MVVMTests.swift */; };
 		6D86DE8C2BCD373E00E6311C /* MA23_MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D86DE8B2BCD373E00E6311C /* MA23_MVVMUITests.swift */; };
 		6D86DE8E2BCD373E00E6311C /* MA23_MVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D86DE8D2BCD373E00E6311C /* MA23_MVVMUITestsLaunchTests.swift */; };
+		6D86DE9B2BCD385400E6311C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D86DE9A2BCD385400E6311C /* User.swift */; };
+		6D86DE9D2BCD39F400E6311C /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D86DE9C2BCD39F400E6311C /* UsersViewModel.swift */; };
+		6D86DE9F2BCD695000E6311C /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D86DE9E2BCD695000E6311C /* UserDetailView.swift */; };
+		6D86DEA12BCE55B500E6311C /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D86DEA02BCE55B500E6311C /* UserListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		6D86DE872BCD373E00E6311C /* MA23_MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MA23_MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D86DE8B2BCD373E00E6311C /* MA23_MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MA23_MVVMUITests.swift; sourceTree = "<group>"; };
 		6D86DE8D2BCD373E00E6311C /* MA23_MVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MA23_MVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6D86DE9A2BCD385400E6311C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6D86DE9C2BCD39F400E6311C /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		6D86DE9E2BCD695000E6311C /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		6D86DEA02BCE55B500E6311C /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 				6D86DE722BCD373C00E6311C /* ContentView.swift */,
 				6D86DE742BCD373E00E6311C /* Assets.xcassets */,
 				6D86DE762BCD373E00E6311C /* Preview Content */,
+				6D86DE9A2BCD385400E6311C /* User.swift */,
+				6D86DE9C2BCD39F400E6311C /* UsersViewModel.swift */,
+				6D86DE9E2BCD695000E6311C /* UserDetailView.swift */,
+				6D86DEA02BCE55B500E6311C /* UserListView.swift */,
 			);
 			path = MA23_MVVM;
 			sourceTree = "<group>";
@@ -258,7 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D86DE732BCD373C00E6311C /* ContentView.swift in Sources */,
+				6D86DEA12BCE55B500E6311C /* UserListView.swift in Sources */,
+				6D86DE9D2BCD39F400E6311C /* UsersViewModel.swift in Sources */,
 				6D86DE712BCD373C00E6311C /* MA23_MVVMApp.swift in Sources */,
+				6D86DE9F2BCD695000E6311C /* UserDetailView.swift in Sources */,
+				6D86DE9B2BCD385400E6311C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
