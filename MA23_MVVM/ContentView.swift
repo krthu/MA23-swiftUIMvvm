@@ -23,10 +23,7 @@ struct ContentView: View {
                     Label("Notes", systemImage: "list.bullet.clipboard")
                 }
         }
-        
     }
-    
-
 }
 
 

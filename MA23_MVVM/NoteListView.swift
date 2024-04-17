@@ -6,34 +6,46 @@
 //
 
 import SwiftUI
-
+import SwiftData
 
 struct NoteListView: View {
-    
-    @StateObject var notesViewModel = NotesViewModel()
-
+    @Environment(\.modelContext) var modelContext
+    @State private var path = [Note]()
+    @Query var notes: [Note]
     
     var body: some View {
-        NavigationStack{
+        NavigationStack(path: $path){
             List{
-                ForEach(notesViewModel.notes){ note in
-                    NavigationLink(destination: NoteDetailView(notesVM: notesViewModel ,note: note)){
+                ForEach(notes){ note in
+                    NavigationLink(value: note) {
+
                         noteRow(note: note)
                     }
                 }
-                .onDelete(perform: notesViewModel.deleteNote)
+                .onDelete(perform: deleteNote)
             }
-  
             .navigationTitle("Notes")
-            .navigationBarItems(trailing: NavigationLink(destination: NoteDetailView(notesVM: notesViewModel)){
-                Image(systemName: "plus")
-                    
-            })
-
+            .navigationDestination(for: Note.self) { note in
+                NoteDetailView(note: note)
+            }
+            .toolbar{
+                Button("New Note", systemImage: "plus", action: addNote)
+            }
         }
     }
-    func delete(at offsetes: IndexSet){
-        print("delete")
+    func addNote() {
+        let newNote = Note(content: "")
+        modelContext.insert(newNote)
+        path.append(newNote)
+       
+    }
+    
+    
+    func deleteNote(_ indexSet: IndexSet){
+        for index in indexSet{
+            let note = notes[index]
+            modelContext.delete(note)
+        }
     }
 }
 
@@ -42,7 +54,7 @@ struct noteRow: View {
     
     var body: some View{
         HStack{
-            Text(note.date)
+            Text(note.unformatedDate.formatted(date: .long, time: .omitted))
             Spacer()
             Text(note.content.prefix(5)+"...")
         }

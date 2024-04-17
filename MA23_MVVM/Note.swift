@@ -9,19 +9,12 @@ import Foundation
 import SwiftData
 
 @Model
-struct Note: Identifiable, Equatable{
+class Note: Identifiable{
     let id = UUID()
     var content: String
-    private var unformatedDate = Date()
-    private let dateFormatter = DateFormatter()
-    var date: String {
-        return dateFormatter.string(from: unformatedDate)
-    }
-    
+    var unformatedDate: Date
     init(content: String) {
         self.content = content
-        dateFormatter.dateStyle = .medium
+        self.unformatedDate = .now
     }
-    
-    
 }
