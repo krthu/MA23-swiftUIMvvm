@@ -18,6 +18,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Converter", systemImage: "dollarsign.circle.fill")
                 }
+            NoteListView()
+                .tabItem {
+                    Label("Notes", systemImage: "list.bullet.clipboard")
+                }
         }
         
     }
