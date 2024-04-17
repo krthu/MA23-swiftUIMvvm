@@ -11,18 +11,17 @@ class CurrencyConverter : ObservableObject{
     @Published var currencies = [Currency(name: "Sek", rate: 10.94),
                         Currency(name: "USD", rate: 1),
                       Currency(name: "Eur", rate: 0.94)]
-    @Published var fromCurrency: Int = 0
-    @Published var toCurrency: Int = 0
+//    @Published var fromCurrency: Int = 0
+//    @Published var toCurrency: Int = 0
+//    @Published var fromCurrencyObject: Currency = Currency(name: "Sek", rate: 10.94)
+//    @Published var toCurrencyObject: Currency = Currency(name: "Sek", rate: 10.94)
+    @Published var fromCurrencyObject: Currency = Currency(name: "Sek", rate: 10.94)
+    @Published var toCurrencyObject: Currency = Currency(name: "Sek", rate: 10.94)
     @Published var amountToConvert = 0.0
     var convertedAmount: Double {
-        let inDollar = amountToConvert / currencies[fromCurrency].rate
-        return inDollar * currencies[toCurrency].rate
+       // let inDollar = amountToConvert / currencies[fromCurrency].rate
+       // return inDollar * currencies[toCurrency].rate
+        let inDollar = amountToConvert / fromCurrencyObject.rate
+        return inDollar * toCurrencyObject.rate
     }
-    
-    
-    
-    
-    
-    
-    
 }

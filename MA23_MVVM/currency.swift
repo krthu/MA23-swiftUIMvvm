@@ -7,9 +7,8 @@
 
 import Foundation
 
-struct Currency : Identifiable{
+struct Currency : Identifiable, Hashable{
     var id = UUID()
     var name: String
     var rate: Double
-    
 }
