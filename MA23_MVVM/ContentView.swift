@@ -14,6 +14,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Users", systemImage: "person")
                 }
+            CurrencyConverterView()
+                .tabItem {
+                    Label("Converter", systemImage: "dollarsign.circle.fill")
+                }
         }
         
     }

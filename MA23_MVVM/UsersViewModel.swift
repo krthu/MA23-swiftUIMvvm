@@ -14,7 +14,6 @@ class UsersViewModel: ObservableObject{
         addMockData()
     }
     
-    
     func addMockData(){
         users.append(User(name: "Kristian", email: "kristian@kristian.com", profileImage: "brain.filled.head.profile"))
         users.append(User(name: "Olle", email: "olle@olle.com", profileImage: "brain.filled.head.profile"))
