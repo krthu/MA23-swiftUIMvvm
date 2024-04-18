@@ -20,4 +20,8 @@ class UsersViewModel: ObservableObject{
         users.append(User(name: "Björn", email: "björn@björn.com", profileImage: "brain.filled.head.profile"))
 
     }
+    
+    func addUser(user: User){
+        users.append(user)
+    }
 }
