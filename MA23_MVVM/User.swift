@@ -12,4 +12,5 @@ struct User: Identifiable{
     var name: String
     var email: String
     var profileImage: String
+    var imageData: Data?
 }

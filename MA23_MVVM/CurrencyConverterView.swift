@@ -10,20 +10,21 @@ import SwiftUI
 struct CurrencyConverterView: View {
     @State var amount: String = ""
     @StateObject var converter = CurrencyConverter()
-
+    
     
     
     var body: some View {
         NavigationStack{
-            List{
-                HStack{
+            VStack{
+                List{
                     fromPicker(converter: converter, amount: $amount)
-                }
-                HStack{
+                
                     toPicker(converter: converter)
+                    
                 }
+                .navigationTitle("Convert")
+
             }
-            .navigationTitle("Convert")
         }
     }
 }
@@ -62,6 +63,7 @@ struct toPicker :View {
                     Text(currency.name).tag(currency.id)
                 }
             }
+            
         }
     }
 }
